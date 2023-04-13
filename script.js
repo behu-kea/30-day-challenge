@@ -17,6 +17,13 @@ function createCheckboxes() {
         wrapper.appendChild(label);
         checkboxContainer.appendChild(wrapper);
 
+        wrapper.addEventListener('click', (event) => {
+            if (event.target === wrapper) {
+                checkbox.checked = !checkbox.checked;
+                localStorage.setItem(`day-${i}`, checkbox.checked);
+            }
+        });
+
         checkbox.addEventListener('change', () => {
             localStorage.setItem(`day-${i}`, checkbox.checked);
         });
