@@ -50,6 +50,10 @@ label {
     color: #424242;
     position: relative;
     padding-left: 30px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
 }
 
 label::before {

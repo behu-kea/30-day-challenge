@@ -20,12 +20,17 @@ function createCheckboxes() {
         wrapper.addEventListener('click', (event) => {
             if (event.target === wrapper) {
                 checkbox.checked = !checkbox.checked;
-                localStorage.setItem(`day-${i}`, checkbox.checked);
+
+                setTimeout(() => {
+                    localStorage.setItem(`day-${i}`, checkbox.checked);
+                }, 0);
             }
         });
 
         checkbox.addEventListener('change', () => {
-            localStorage.setItem(`day-${i}`, checkbox.checked);
+            setTimeout(() => {
+                localStorage.setItem(`day-${i}`, checkbox.checked);
+            }, 0);
         });
 
         const savedValue = localStorage.getItem(`day-${i}`);
